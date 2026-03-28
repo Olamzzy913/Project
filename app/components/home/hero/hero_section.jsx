@@ -8,8 +8,9 @@ export default function HeroSection() {
           <div className="grid grid-cols-2 gap-16 items-center">
             <div className="flex flex-col">
               <div className="mb-6 flex justify-left lg:justify-start mt-6 lg:mt-0">
-                <div className="inline-flex items-center px-2 py-1 sm:px-4 sm:py-2 rounded-full bg-[#1c1c1c] border-white border-[0.5px] shadow-[0_0_10px_#00e7b141] text-[10px] sm:text-sm font-medium text-[#01E8F0] animate-pulse">
-                  <span>⚡ Frontend Developer | Web & Mobile</span>
+                <div className="inline-flex gap-2 items-center px-2 py-1 sm:px-4 sm:py-2 rounded-full bg-[#1c1c1c] border-white border-[0.5px] shadow-[0_0_10px_#00e7b141] text-[10px] sm:text-sm font-medium text-[#01E8F0] animate-pulse">
+                  <div className="w-2 h-2 rounded-full bg-[#01E8F0] animate-pulse" />{" "}
+                  <span> Frontend Developer | Web & Mobile</span>
                 </div>
               </div>
               <h2 className="text-left text-[clamp(40px,6vw,90px)] tracking-[-0.04em] leading-[0.9] font-bold mb-8 text-[#01E8F0] max-w-full wrap-break-word">
