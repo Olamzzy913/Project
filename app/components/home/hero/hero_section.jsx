@@ -23,7 +23,7 @@ export default function HeroSection() {
               </p>{" "}
               <div className="flex gap-5 items-center flex-wrap">
                 {/* Filled Button */}
-                <button className="px-8 py-4 bg-linear-to-r from-[#01E8F0] to-[#01c4cb] text-black font-semibold text-base uppercase tracking-wide rounded-xl min-h-14 inline-flex items-center justify-center gap-3 whitespace-nowrap hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-500 ease-in-out relative overflow-hidden">
+                <button className="group/btn px-6 py-3 bg-linear-to-r from-[#01E8F0] to-[#01c4cb] text-black text-[11px] font-black uppercase tracking-widest rounded-xl hover:shadow-[0_0_20px_#01E8F0] transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -41,7 +41,7 @@ export default function HeroSection() {
                 </button>
 
                 {/* Outline Button */}
-                <button className="px-8 py-4 bg-transparent text-[#01E8F0] font-semibold text-base uppercase tracking-wide rounded-xl min-h-14 inline-flex items-center justify-center gap-3 whitespace-nowrap border border-[#01E8F0] hover:bg-[#01E8F0] hover:text-black hover:shadow-[0_0_20px_rgba(1,232,240,0.4)] active:scale-95 transition-all duration-500 ease-in-out relative overflow-hidden">
+                <button className="px-6 py-3 bg-transparent text-[#01E8F0]  text-[11px] font-black uppercase tracking-widest rounded-xl inline-flex items-center justify-center gap-3 whitespace-nowrap border border-[#01E8F0] hover:bg-[#01E8F0] hover:text-black hover:shadow-[0_0_20px_rgba(1,232,240,0.4)] active:scale-95 transition-all duration-500 ease-in-out relative overflow-hidden">
                   <svg
                     className="w-5 h-5"
                     fill="none"
