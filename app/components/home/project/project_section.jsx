@@ -119,7 +119,7 @@ const projects = [
     appScreens: {
       splash: "./oyato-splash.png", // Your actual splash screen image
       welcome: "./oyato-welcome.png",
-      home: "https://i.pinimg.com/1200x/fe/63/ad/fe63ad6cdc3f130c4f3fe048f71bf60b.jpg",
+      home: "./oyato-home.png",
     },
   },
   {
