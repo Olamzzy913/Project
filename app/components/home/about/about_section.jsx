@@ -1,22 +1,20 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { FaFlutter, FaDartLang } from "react-icons/fa6";
-import { FaReact } from "react-icons/fa";
-import { IoLogoFirebase } from "react-icons/io5";
-import { SiNextdotjs, SiNuxt, SiVuedotjs, SiNodedotjs } from "react-icons/si";
 import {
   FaMobileAlt,
   FaCode,
-  FaDownload,
   FaEnvelope,
-  FaArrowRight,
   FaStar,
   FaRocket,
   FaShieldAlt,
   FaTachometerAlt,
 } from "react-icons/fa";
 import { MdWeb } from "react-icons/md";
+import { FaReact } from "react-icons/fa";
+import { IoLogoFirebase } from "react-icons/io5";
+import React, { useState, useEffect } from "react";
+import { FaFlutter, FaDartLang, FaFile } from "react-icons/fa6";
+import { SiNextdotjs, SiNuxt, SiVuedotjs, SiNodedotjs } from "react-icons/si";
 
 export default function AboutMe() {
   const [displayText, setDisplayText] = useState("");
@@ -66,7 +64,7 @@ export default function AboutMe() {
       color: "#40C4FF",
       technologies: ["Flutter", "Dart"],
       description:
-        "Building high-performance, cross-platform mobile apps with Flutter for iOS and Android. Expertise in state management, animations, and native integrations.",
+        "Building high-performance, cross-platform mobile apps with Flutter for iOS and Android. Expertise in state management, animations, and native integrations. With over 12+ successful app launches, I've helped businesses reach millions of users across both major mobile platforms.",
       stats: [
         { label: "Apps Delivered", value: "12+", icon: FaRocket },
         { label: "Client Rating", value: "4.9★", icon: FaStar },
@@ -86,7 +84,7 @@ export default function AboutMe() {
       color: "#61DAFB",
       technologies: ["React", "Next.js", "Vue.js", "Nuxt.js"],
       description:
-        "Architecting scalable web applications using React, Next.js, Vue, and Nuxt. Focus on performance, SEO, and responsive design.",
+        "Architecting scalable web applications using React, Next.js, Vue, and Nuxt. Focus on performance, SEO, and responsive design. I've built over 20+ websites and web applications, achieving sub-1.2s load times and 90+ Lighthouse scores.",
       stats: [
         { label: "Websites Built", value: "20+", icon: FaRocket },
         { label: "Client Rating", value: "4.8★", icon: FaStar },
@@ -101,7 +99,7 @@ export default function AboutMe() {
       color: "#FFCA28",
       technologies: ["Firebase", "Node.js"],
       description:
-        "Leveraging Firebase and Node.js for real-time databases, authentication, push notifications, and scalable backend services.",
+        "Leveraging Firebase and Node.js for real-time databases, authentication, push notifications, and scalable backend services. Built 15+ robust APIs handling thousands of concurrent users with sub-100ms response times.",
       stats: [
         { label: "APIs Built", value: "15+", icon: FaRocket },
         { label: "Uptime", value: "99.9%", icon: FaShieldAlt },
@@ -122,7 +120,7 @@ export default function AboutMe() {
     {
       role: "Senior Mobile Developer",
       company: "Tech Innovators Inc.",
-      period: "2022 - Present",
+      period: "2024 - Present",
       description:
         "Leading mobile development for cross-platform apps serving 500K+ users. Implemented CI/CD pipelines and reduced build times by 40%.",
       icon: FaMobileAlt,
@@ -130,7 +128,7 @@ export default function AboutMe() {
     {
       role: "Full Stack Developer",
       company: "Digital Solutions Co.",
-      period: "2020 - 2022",
+      period: "2022 - 2024",
       description:
         "Developed and maintained 10+ web applications using React and Node.js. Improved application performance by 35% through optimization.",
       icon: MdWeb,
@@ -138,15 +136,36 @@ export default function AboutMe() {
     {
       role: "Frontend Developer",
       company: "Creative Agency",
-      period: "2018 - 2020",
+      period: "2021 - 2022",
       description:
         "Built responsive websites and interactive web applications for clients across fintech, e-commerce, and healthcare sectors.",
       icon: FaCode,
     },
   ];
 
+  const handleHireMe = (e) => {
+    e.preventDefault();
+
+    const subject = encodeURIComponent("Hiring Inquiry - Frontend Developer");
+    const body = encodeURIComponent(
+      `Hi Emmanuel,
+
+I came across your portfolio and I'm impressed with your work in web and mobile development.
+
+I'd like to discuss a potential opportunity to work together.
+
+Could we schedule a quick call to discuss further?
+
+Best regards,
+[Your Name]`,
+    );
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=emmanuelojelade7@gmail.com&su=${subject}&body=${body}`;
+    window.open(gmailUrl, "_blank");
+  };
+
   return (
-    <section className="bg-[#050505] min-h-screen py-24 relative overflow-hidden selection:bg-[#01E8F0] selection:text-black">
+    <section className="bg-[#050505] min-h-screen py-12 md:py-24 relative overflow-hidden selection:bg-[#01E8F0] selection:text-black">
       {/* Dynamic Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] rounded-full blur-[150px] opacity-10 bg-[#01E8F0] pointer-events-none" />
 
@@ -159,19 +178,19 @@ export default function AboutMe() {
         }}
       />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Header Section */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
           <div className="inline-block mb-4">
-            <div className="flex items-center gap-2 bg-[#01E8F0]/10 px-4 py-2 rounded-full border border-[#01E8F0]/30">
+            <div className="flex items-center gap-2 bg-[#01E8F0]/10 px-3 md:px-4 py-2 rounded-full border border-[#01E8F0]/30">
               <div className="w-2 h-2 rounded-full bg-[#01E8F0] animate-pulse" />
-              <span className="text-[#01E8F0] font-mono text-xs tracking-wider">
+              <span className="text-[#01E8F0] font-mono text-[10px] md:text-xs tracking-wider">
                 ABOUT_ME.EXE
               </span>
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tighter mb-6">
             <span className="text-white">Crafting </span>
             <span className="text-[#01E8F0] relative">
               Digital Excellence
@@ -179,20 +198,15 @@ export default function AboutMe() {
             </span>
           </h1>
 
-          <div className="font-mono text-lg text-white/60 mb-4">
+          <div className="font-mono text-base md:text-lg text-white/60 mb-4">
             <span className="text-[#01E8F0]">{">"}</span>{" "}
             <span className="border-r-2 border-[#01E8F0]">{displayText}</span>
           </div>
-
-          <p className="text-white/40 text-sm font-mono tracking-wider">
-            {">"} flutter developer // {">"} react/next architect // {">"}{" "}
-            firebase expert
-          </p>
         </div>
 
         {/* Bio Section */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
-          <p className="text-white/60 text-lg leading-relaxed">
+        <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
+          <p className="text-white/60 text-base md:text-lg leading-relaxed">
             I'm <span className="text-[#01E8F0]">Ojelade Olamide Emmanuel</span>
             , a passionate mobile and web developer with over 5 years of
             experience building applications that solve real-world problems. I
@@ -204,7 +218,7 @@ export default function AboutMe() {
         </div>
 
         {/* MAIN SECTION: Orbit Animation (Left) + Info Card (Right) */}
-        <div className="flex flex-col lg:flex-row gap-12 items-center mb-32">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center mb-24 md:mb-32">
           {/* LEFT: ORBIT ANIMATION - ROTATING */}
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="relative flex items-center justify-center">
@@ -212,8 +226,8 @@ export default function AboutMe() {
               <div
                 className="absolute rounded-full transition-all duration-1000 opacity-30"
                 style={{
-                  width: "520px",
-                  height: "520px",
+                  width: "min(520px, 90vw)",
+                  height: "min(520px, 90vw)",
                   background:
                     "radial-gradient(circle, #01E8F0 0%, transparent 70%)",
                   filter: "blur(50px)",
@@ -222,15 +236,15 @@ export default function AboutMe() {
               />
 
               {/* Static Rings */}
-              <div className="absolute rounded-full border border-[#01E8F0]/20 w-112.5 h-112.5 pointer-events-none" />
-              <div className="absolute rounded-full border border-[#01E8F0]/10 w-95 h-95 pointer-events-none" />
-              <div className="absolute rounded-full border border-[#01E8F0]/5 w-77.5 h-77.5 pointer-events-none" />
+              <div className="absolute rounded-full border border-[#01E8F0]/20 w-[min(450px,80vw)] h-[min(450px,80vw)] pointer-events-none" />
+              <div className="absolute rounded-full border border-[#01E8F0]/10 w-[min(380px,68vw)] h-[min(380px,68vw)] pointer-events-none" />
+              <div className="absolute rounded-full border border-[#01E8F0]/5 w-[min(310px,55vw)] h-[min(310px,55vw)] pointer-events-none" />
 
-              {/* Rotating Orbit Container - Continuous rotation */}
-              <div className="relative w-120 h-120 animate-orbit-rotate">
+              {/* Rotating Orbit Container */}
+              <div className="relative w-[min(480px,85vw)] h-[min(480px,85vw)] animate-orbit-rotate">
                 {orbitItems.map((item, idx) => {
                   const angle = (idx * 360) / orbitItems.length;
-                  const radius = 200;
+                  const radius = 180;
                   const x = Math.cos((angle * Math.PI) / 180) * radius;
                   const y = Math.sin((angle * Math.PI) / 180) * radius;
 
@@ -253,7 +267,7 @@ export default function AboutMe() {
                         }`}
                       >
                         <item.icon
-                          className="w-7 h-7 transition-all duration-300 group-hover/icon:scale-110"
+                          className="w-5 h-5 md:w-7 md:h-7 transition-all duration-300 group-hover/icon:scale-110"
                           style={{ color: item.color }}
                         />
                         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
@@ -268,124 +282,132 @@ export default function AboutMe() {
               </div>
 
               {/* Center Core */}
-              <div className="absolute z-10 p-3 rounded-full border-2 border-[#01E8F0]/40 bg-black/60 backdrop-blur-md shadow-[0_0_50px_rgba(1,232,240,0.3)] transition-all duration-500 hover:scale-110">
-                <div className="h-24 w-24 rounded-full bg-linear-to-br from-[#01E8F0]/20 to-transparent flex items-center justify-center">
-                  <FaCode className="text-4xl text-[#01E8F0]" />
+              <div className="absolute z-10 p-2 md:p-3 rounded-full border-2 border-[#01E8F0]/40 bg-black/60 backdrop-blur-md shadow-[0_0_50px_rgba(1,232,240,0.3)] transition-all duration-500 hover:scale-110">
+                <div className="h-16 w-16 md:h-24 md:w-24 rounded-full bg-linear-to-br from-[#01E8F0]/20 to-transparent flex items-center justify-center">
+                  <FaCode className="text-2xl md:text-4xl text-[#01E8F0]" />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* RIGHT: DETAIL CARD - Nicer layout */}
+          {/* RIGHT: DETAIL CARD - FIXED HEIGHT WITH SCROLL */}
           <div className="w-full lg:w-1/2">
             <div className="relative group">
               {/* Glow effect behind card */}
               <div className="absolute -inset-1 bg-linear-to-r from-[#01E8F0]/30 to-[#01E8F0]/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              {/* Main Card */}
-              <div className="relative overflow-hidden rounded-2xl border border-[#01E8F0]/20 bg-linear-to-br from-black/80 to-black/40 backdrop-blur-xl p-8 shadow-2xl">
+              {/* Main Card - Fixed height container */}
+              <div className="relative overflow-hidden rounded-2xl border border-[#01E8F0]/20 bg-linear-to-br from-black/80 to-black/40 backdrop-blur-xl shadow-2xl ">
                 {/* Scanline effect */}
                 <div className="absolute inset-0 pointer-events-none bg-linear-to-b from-transparent via-[#01E8F0]/5 to-transparent animate-scan-slow" />
 
-                {/* Header with category badge */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-xl bg-[#01E8F0]/10 border border-[#01E8F0]/20">
-                      <activeDetails.icon
-                        className="text-2xl"
-                        style={{ color: activeDetails.color }}
-                      />
+                {/* Scrollable Content */}
+                <div className=" overflow-y-auto p-5 md:p-6 lg:p-8 custom-scrollbar">
+                  {/* Header with category badge */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 rounded-xl bg-[#01E8F0]/10 border border-[#01E8F0]/20 shrink-0">
+                        <activeDetails.icon
+                          className="text-xl md:text-2xl"
+                          style={{ color: activeDetails.color }}
+                        />
+                      </div>
+                      <div>
+                        <h3 className="text-lg md:text-xl font-bold text-white">
+                          {activeDetails.title}
+                        </h3>
+                        <p className="text-white/40 text-[10px] md:text-xs font-mono">
+                          {activeDetails.subtitle}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">
-                        {activeDetails.title}
-                      </h3>
-                      <p className="text-white/40 text-xs font-mono">
-                        {activeDetails.subtitle}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="px-3 py-1.5 rounded-full bg-[#01E8F0]/10 border border-[#01E8F0]/20">
-                    <span className="text-[#01E8F0] font-mono text-[10px] uppercase tracking-wider">
-                      Active Stack
-                    </span>
-                  </div>
-                </div>
-
-                {/* Technologies - Clean grid */}
-                <div className="mb-6">
-                  <h4 className="text-[#01E8F0] font-mono text-xs mb-3 uppercase tracking-wider flex items-center gap-2">
-                    <FaCode className="text-[10px]" />
-                    Tech Stack
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {activeDetails.technologies.map((tech, idx) => (
-                      <span
-                        key={idx}
-                        className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white/90 text-sm font-medium hover:border-[#01E8F0]/40 hover:text-[#01E8F0] transition-all hover:scale-105"
-                      >
-                        {tech}
+                    <div className="px-2 md:px-3 py-1 md:py-1.5 rounded-full bg-[#01E8F0]/10 border border-[#01E8F0]/20 shrink-0 ml-2">
+                      <span className="text-[#01E8F0] font-mono text-[8px] md:text-[10px] uppercase tracking-wider whitespace-nowrap">
+                        Active Stack
                       </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Description */}
-                <div className="mb-6">
-                  <h4 className="text-[#01E8F0] font-mono text-xs mb-2 uppercase tracking-wider">
-                    Expertise
-                  </h4>
-                  <p className="text-white/60 text-sm leading-relaxed">
-                    {activeDetails.description}
-                  </p>
-                </div>
-
-                {/* Stats Cards */}
-                <div className="grid grid-cols-3 gap-3 mb-6">
-                  {activeDetails.stats.map((stat, idx) => (
-                    <div
-                      key={idx}
-                      className="text-center p-3 rounded-xl bg-white/5 border border-white/10 hover:border-[#01E8F0]/30 transition-all group/stat"
-                    >
-                      <stat.icon className="text-[#01E8F0] text-lg mx-auto mb-2 group-hover/stat:scale-110 transition-transform" />
-                      <div className="text-white font-bold text-sm">
-                        {stat.value}
-                      </div>
-                      <div className="text-white/40 text-[9px] font-mono uppercase">
-                        {stat.label}
-                      </div>
                     </div>
-                  ))}
-                </div>
+                  </div>
 
-                {/* Key Features */}
-                <div className="mb-6">
-                  <h4 className="text-[#01E8F0] font-mono text-xs mb-3 uppercase tracking-wider">
-                    Key Features
-                  </h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    {activeDetails.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#01E8F0]" />
-                        <span className="text-white/50 text-xs">{feature}</span>
+                  {/* Technologies - Clean grid */}
+                  <div className="mb-6">
+                    <h4 className="text-[#01E8F0] font-mono text-[10px] md:text-xs mb-3 uppercase tracking-wider flex items-center gap-2">
+                      <FaCode className="text-[8px] md:text-[10px]" />
+                      Tech Stack
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {activeDetails.technologies.map((tech, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 md:px-4 py-1.5 md:py-2 rounded-lg bg-white/5 border border-white/10 text-white/90 text-xs md:text-sm font-medium hover:border-[#01E8F0]/40 hover:text-[#01E8F0] transition-all hover:scale-105"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <div className="mb-6">
+                    <h4 className="text-[#01E8F0] font-mono text-[10px] md:text-xs mb-2 uppercase tracking-wider">
+                      Expertise
+                    </h4>
+                    <p className="text-white/60 text-xs md:text-sm leading-relaxed">
+                      {activeDetails.description}
+                    </p>
+                  </div>
+
+                  {/* Stats Cards */}
+                  <div className="grid grid-cols-3 gap-2 md:gap-3 mb-6">
+                    {activeDetails.stats.map((stat, idx) => (
+                      <div
+                        key={idx}
+                        className="text-center p-2 md:p-3 rounded-xl bg-white/5 border border-white/10 hover:border-[#01E8F0]/30 transition-all group/stat"
+                      >
+                        <stat.icon className="text-[#01E8F0] text-base md:text-lg mx-auto mb-1 md:mb-2 group-hover/stat:scale-110 transition-transform" />
+                        <div className="text-white font-bold text-xs md:text-sm">
+                          {stat.value}
+                        </div>
+                        <div className="text-white/40 text-[7px] md:text-[9px] font-mono uppercase">
+                          {stat.label}
+                        </div>
                       </div>
                     ))}
                   </div>
+
+                  {/* Key Features */}
+                  <div className="mb-6">
+                    <h4 className="text-[#01E8F0] font-mono text-[10px] md:text-xs mb-3 uppercase tracking-wider">
+                      Key Features
+                    </h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {activeDetails.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center gap-2">
+                          <div className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-[#01E8F0]" />
+                          <span className="text-white/50 text-[10px] md:text-xs">
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
-                {/* Decorative corner accent */}
-                <div className="absolute bottom-3 right-3 text-[#01E8F0]/5 text-7xl font-bold">
+                {/* Decorative corner accent - positioned absolutely within the fixed container */}
+                <div className="absolute bottom-2 right-2 md:bottom-3 md:right-3 text-[#01E8F0]/5 text-5xl md:text-7xl font-bold pointer-events-none">
                   {activeTech === "mobile" && "📱"}
                   {activeTech === "web" && "🌐"}
                   {activeTech === "backend" && "⚡"}
                 </div>
+
+                {/* Subtle gradient fade at bottom to indicate scroll */}
+                <div className="absolute bottom-0 left-0 right-0 h-12 bg-linear-to-t from-black/60 to-transparent pointer-events-none rounded-b-2xl" />
               </div>
             </div>
           </div>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto mb-24">
+        <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-3xl mx-auto mb-16 md:mb-24">
           {[
             { value: "5+", label: "Years Experience" },
             { value: "50+", label: "Projects Completed" },
@@ -393,12 +415,12 @@ export default function AboutMe() {
           ].map((stat, idx) => (
             <div
               key={idx}
-              className="text-center p-4 border border-white/10 rounded-xl bg-white/5 backdrop-blur-sm hover:border-[#01E8F0]/30 transition-all group"
+              className="text-center p-3 md:p-4 border border-white/10 rounded-xl bg-white/5 backdrop-blur-sm hover:border-[#01E8F0]/30 transition-all group"
             >
-              <div className="text-2xl font-bold text-[#01E8F0] group-hover:scale-110 transition-transform">
+              <div className="text-xl md:text-2xl font-bold text-[#01E8F0] group-hover:scale-110 transition-transform">
                 {stat.value}
               </div>
-              <div className="text-[10px] font-mono text-white/40 uppercase tracking-wider">
+              <div className="text-[8px] md:text-[10px] font-mono text-white/40 uppercase tracking-wider">
                 {stat.label}
               </div>
             </div>
@@ -406,35 +428,37 @@ export default function AboutMe() {
         </div>
 
         {/* Experience Timeline */}
-        <div className="mb-24">
-          <div className="flex items-center gap-3 mb-12">
+        <div className="mb-16 md:mb-24">
+          <div className="flex items-center gap-3 mb-8 md:mb-12">
             <div className="h-px flex-1 bg-linear-to-r from-[#01E8F0] to-transparent" />
-            <h2 className="text-2xl font-bold text-white flex items-center gap-2">
+            <h2 className="text-xl md:text-2xl font-bold text-white flex items-center gap-2">
               <span className="text-[#01E8F0]">#</span>
               Journey Timeline
             </h2>
             <div className="h-px flex-1 bg-linear-to-l from-[#01E8F0] to-transparent" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
             {experiences.map((exp, idx) => (
               <div
                 key={idx}
-                className="group relative p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-[#01E8F0]/30 transition-all duration-300 hover:-translate-y-1"
+                className="group relative p-5 md:p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-[#01E8F0]/30 transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="absolute top-4 right-4 text-[#01E8F0]/30 text-4xl font-bold">
+                <div className="absolute top-3 right-3 md:top-4 md:right-4 text-[#01E8F0]/30 text-2xl md:text-4xl font-bold">
                   {String(idx + 1).padStart(2, "0")}
                 </div>
                 <div className="relative z-10">
-                  <exp.icon className="text-2xl text-[#01E8F0] mb-3" />
-                  <div className="text-[#01E8F0] font-mono text-xs mb-2">
+                  <exp.icon className="text-xl md:text-2xl text-[#01E8F0] mb-3" />
+                  <div className="text-[#01E8F0] font-mono text-[10px] md:text-xs mb-2">
                     {exp.period}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-1">
+                  <h3 className="text-base md:text-xl font-bold text-white mb-1">
                     {exp.role}
                   </h3>
-                  <p className="text-white/60 text-sm mb-3">{exp.company}</p>
-                  <p className="text-white/40 text-xs leading-relaxed">
+                  <p className="text-white/60 text-xs md:text-sm mb-3">
+                    {exp.company}
+                  </p>
+                  <p className="text-white/40 text-[10px] md:text-xs leading-relaxed">
                     {exp.description}
                   </p>
                 </div>
@@ -448,40 +472,51 @@ export default function AboutMe() {
         <div className="text-center">
           <div className="inline-block relative">
             <div className="absolute inset-0 bg-[#01E8F0]/20 blur-3xl rounded-full" />
-            <blockquote className="relative max-w-3xl mx-auto p-8 border border-[#01E8F0]/20 rounded-2xl bg-black/40 backdrop-blur-sm">
-              <div className="text-4xl text-[#01E8F0] mb-4">"</div>
-              <p className="text-white/80 text-lg md:text-xl leading-relaxed">
+            <blockquote className="relative max-w-3xl mx-auto p-6 md:p-8 border border-[#01E8F0]/20 rounded-2xl bg-black/40 backdrop-blur-sm">
+              <div className="text-3xl md:text-4xl text-[#01E8F0] mb-4">"</div>
+              <p className="text-white/80 text-base md:text-lg lg:text-xl leading-relaxed">
                 Code is poetry written for both machines and humans. I strive to
                 write elegant solutions that are scalable, maintainable, and
                 delightful to use.
               </p>
-              <div className="text-[#01E8F0] font-mono text-sm mt-4 flex items-center justify-center gap-2">
-                <span className="w-8 h-px bg-[#01E8F0]" />
+              <div className="text-[#01E8F0] font-mono text-xs md:text-sm mt-4 flex items-center justify-center gap-2">
+                <span className="w-6 md:w-8 h-px bg-[#01E8F0]" />
                 Always learning, always building
-                <span className="w-8 h-px bg-[#01E8F0]" />
+                <span className="w-6 md:w-8 h-px bg-[#01E8F0]" />
               </div>
             </blockquote>
           </div>
 
           {/* Contact/Resume Button */}
-          <div className="mt-12 flex gap-4 justify-center">
-            <button className="px-8 py-3 bg-[#01E8F0] text-black font-mono text-sm font-bold uppercase tracking-wider rounded-xl hover:shadow-[0_0_25px_#01E8F0] transition-all duration-300 hover:scale-105 flex items-center gap-2">
-              <FaDownload className="text-sm" />
-              Download Resume
+          <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/document/d/1EWhKnJwPeDBeGhVPBsOsm_Cl5_SJGVEXExTsCxhcCL8/edit?usp=sharing",
+                  "_blank",
+                )
+              }
+              className="px-6 md:px-8 py-2.5 md:py-3 cursor-pointer bg-[#01E8F0] text-black font-mono text-xs md:text-sm font-bold uppercase tracking-wider rounded-xl hover:shadow-[0_0_25px_#01E8F0] transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <FaFile className="text-sm hidden sm:block" />
+              View Resume
             </button>
-            <button className="px-8 py-3 border border-[#01E8F0] text-[#01E8F0] font-mono text-sm font-bold uppercase tracking-wider rounded-xl hover:bg-[#01E8F0]/10 transition-all duration-300 flex items-center gap-2">
-              <FaEnvelope className="text-sm" />
+            <button
+              onClick={handleHireMe}
+              className="px-6 md:px-8 py-2.5 md:py-3 cursor-pointer border border-[#01E8F0] text-[#01E8F0] font-mono text-xs md:text-sm font-bold uppercase tracking-wider rounded-xl hover:bg-[#01E8F0]/10 transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <FaEnvelope className="text-sm hidden sm:block" />
               Contact Me
             </button>
           </div>
 
           {/* Terminal-style footer */}
-          <div className="mt-16 pt-8 border-t border-white/5 flex justify-between items-center font-mono text-[10px] text-white/20">
+          <div className="mt-12 md:mt-16 pt-6 md:pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-3 font-mono text-[8px] md:text-[10px] text-white/20">
             <div className="flex items-center gap-2">
               <div className="w-1.5 h-1.5 rounded-full bg-[#01E8F0] animate-pulse" />
               <span>SYSTEM_STATUS: ACTIVE</span>
             </div>
-            <span className="tracking-wider">
+            <span className="tracking-wider text-center">
               {">"} ready_for_opportunities = true
             </span>
             <div className="flex gap-1">
@@ -538,9 +573,9 @@ export default function AboutMe() {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 64px;
-          height: 64px;
-          border-radius: 20px;
+          width: 48px;
+          height: 48px;
+          border-radius: 16px;
           background: rgba(10, 17, 20, 0.9);
           border: 1px solid rgba(1, 232, 240, 0.3);
           backdrop-filter: blur(8px);
@@ -555,15 +590,30 @@ export default function AboutMe() {
           transform: scale(1.1);
         }
 
-        @media (max-width: 768px) {
+        .custom-scrollbar {
+          scrollbar-width: thin;
+          scrollbar-color: #01e8f0 rgba(1, 232, 240, 0.1);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: rgba(1, 232, 240, 0.1);
+          border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #01e8f0;
+          border-radius: 10px;
+        }
+
+        @media (min-width: 768px) {
           .icon-box {
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
-          }
-          .icon-box svg {
-            width: 20px;
-            height: 20px;
+            width: 64px;
+            height: 64px;
+            border-radius: 20px;
           }
         }
       `}</style>
