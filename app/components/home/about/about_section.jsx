@@ -119,7 +119,7 @@ export default function AboutMe() {
   const experiences = [
     {
       role: "Senior Mobile Developer",
-      company: "Tech Innovators Inc.",
+      company: "Tech201.",
       period: "2024 - Present",
       description:
         "Leading mobile development for cross-platform apps serving 500K+ users. Implemented CI/CD pipelines and reduced build times by 40%.",
@@ -127,7 +127,7 @@ export default function AboutMe() {
     },
     {
       role: "Full Stack Developer",
-      company: "Digital Solutions Co.",
+      company: "Freelancer.",
       period: "2022 - 2024",
       description:
         "Developed and maintained 10+ web applications using React and Node.js. Improved application performance by 35% through optimization.",
@@ -135,7 +135,7 @@ export default function AboutMe() {
     },
     {
       role: "Frontend Developer",
-      company: "Creative Agency",
+      company: "Freelancer",
       period: "2021 - 2022",
       description:
         "Built responsive websites and interactive web applications for clients across fintech, e-commerce, and healthcare sectors.",

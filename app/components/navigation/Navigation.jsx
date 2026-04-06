@@ -87,7 +87,7 @@ export default function Navigation() {
           <li>
             <a
               href="#contact"
-              onClick={(e) => handleSmoothScroll(e, "contact")}
+              onClick={(e) => handleSmoothScroll(e, "about")}
               className="hover:text-[#01E8F0] font-semibold text-[#ffffff80] transition-colors duration-200"
             >
               Contact
